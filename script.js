@@ -13,8 +13,8 @@ const lines = [
     // Create a new container for each item
     const listItem = document.createElement('div');
     listItem.style.display = 'flex'; // Make sure the icon and text are aligned
-    listItem.style.alignItems = 'center';
-    listItem.style.marginBottom = '8px'; // Add some spacing between items
+    listItem.style.alignItems = 'flex-start';
+    listItem.style.marginBottom = '16px'; // Add some spacing between items
   
     // Create the icon element
     const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -32,7 +32,7 @@ const lines = [
     // Create the text element
     const text = document.createElement('span');
     text.textContent = line; // Add the line of text
-    text.style.marginLeft = '10px'; // Add spacing between the icon and the text
+    text.style.marginLeft = '15px'; // Add spacing between the icon and the text
   
     // Append the icon and text to the list item
     listItem.appendChild(icon);
