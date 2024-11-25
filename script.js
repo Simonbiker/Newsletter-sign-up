@@ -56,22 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
     emailForm.addEventListener("submit", (event) => {
       event.preventDefault(); // Prevent default form submission
   
+      emailError.textContent = '';
+      emailInput.style.border = '';
       const email = emailInput.value.trim(); // Get the email value and trim whitespace
   
       // Validation: Check if the email field is empty
-      if (email === "") {
-        emailError.textContent = "Email address cannot be empty.";
-        emailError.style.color = "red";
+      if (email === "" || !emailRegex.test(email)) {
+        emailError.textContent = 'Valid email required';
+        emailError.style.color = 'red';
+        emailError.style.fontSize = '0.9rem';
+        emailError.style.marginTop = '5px';
+        emailInput.style.border = '2px solid red';
         return;
       }
-  
-      // Validation: Check if the email format is valid
-      if (!emailRegex.test(email)) {
-        emailError.textContent = "Please enter a valid email address.";
-        emailError.style.color = "red";
-        return;
-      }
-  
+
       // If all validations pass, redirect to the success page
       localStorage.setItem("submittedEmail", email); // Save email in localStorage for use on the success page
       window.location.href = "success.html"; // Redirect to success page

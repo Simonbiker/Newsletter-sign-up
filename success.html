@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./successStyling.css">
     <title>Success</title>
 </head>
     <body>
         <div class="success-container">
+            <div class="image-container">
+                <img src="./assets/images/icon-list.svg" alt="A tick with a red background">
+            </div>
             <!-- favcon to placed top left conor -->
             <h1>Thanks for subscribing!</h1>
 
-            <p>A confirmation email has been sent to <span>ash@loremcompany.com.</span> Please open it and click the button inside to confirm your subscription.</p>
-            <button>Dismiss message</button>
-        </div>  
+            <p>A confirmation email has been sent to <span class="email-adress"></span>
+                Please open it and click the button inside to confirm your subscription.</p>
+            <button class="dismiss-btn">Dismiss message</button>
+        </div> 
+        
+        <script src="./success.js"></script>
     </body>
 </html>
 
