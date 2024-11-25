@@ -47,5 +47,34 @@ img {
 @media screen and (min-width: 1440px) {
     body {
         background-color: var(--darkSlateGrey);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .success-container {
+        background-color: var(--white);
+        width: 380px;
+        height: 380px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    .dismiss-btn {
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .dismiss-btn:hover {
+        background-color: var(--charcolaGrey);
+        transform: scale(1.05);
     }
 }

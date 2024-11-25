@@ -149,4 +149,14 @@ input::placeholder {
         background-color: var(--white);
         padding: 0 2rem 3rem;
     }
+
+    .subscribe-btn {
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .subscribe-btn:hover {
+        background-color: var(--charcolaGrey);
+        transform: scale(1.05);
+    }
 }
