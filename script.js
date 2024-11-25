@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // If all validations pass, redirect to the success page
       localStorage.setItem("submittedEmail", email); // Save email in localStorage for use on the success page
-      window.location.href = "success.html"; // Redirect to success page
+      window.location.href = "./success/success.html"; // Redirect to success page
     });
   });
   
