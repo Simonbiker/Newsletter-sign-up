@@ -58,8 +58,7 @@ h1 {
 }
 
 .form-container {
-    padding: 0 2rem 2rem;
-    /* display: flex; */
+    padding: 1rem 2rem 2rem;
     margin: 0;
     position: relative;
 }
@@ -97,5 +96,57 @@ input::placeholder {
 @media screen and (min-width: 1440px) {
     body {
         background-color: var(--darkSlateGrey);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        row-gap: 0;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: var(--white);
+
+        /* Reversing the order of the cols */
+        grid-template-areas: 
+        "content image-div";
+    }
+
+    .image-div {
+        grid-area: image-div;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150%;
+    }
+    
+    .image-div img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .content {
+        grid-area: content;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        /* justify-content: flex-start; */
+        /* height: 75%; */
+    }
+
+    h1 {
+        padding: 10px 0 0 0;
+        margin-bottom: 0;
+    }
+
+    .form-container {
+        background-color: var(--white);
+        padding: 0 2rem 3rem;
     }
 }
